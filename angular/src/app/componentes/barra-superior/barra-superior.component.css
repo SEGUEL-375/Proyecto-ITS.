@@ -1,0 +1,138 @@
+.contenedor {
+	position: relative;
+	height: 300px;
+	background: linear-gradient(90deg,rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0)), url('./../../../assets/SL-043021-42650-16.jpg');
+	background-size: cover;
+}
+
+#header {
+	display: flex;
+	position: absolute;
+	width: 80%;
+	height: max-content;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 12px;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	top: -30px;
+	left: 10%;
+	align-items: center;
+}
+
+#header img {
+	max-width: 30%;
+	min-height: 38%;
+	margin-left: 5%;
+}
+
+#header p {
+	flex: 1;
+	text-align: center;
+	font-size: 28px;
+	font-family: monospace;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+#banner {
+	position: relative;
+	width: 80%;
+	height: 30%;
+	top: 40%;
+	left: 10%;
+}
+
+#banner p {
+	width: fit-content;
+	color: #ffff;
+	font-size: 30px;
+	font-family: monospace;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.shapes {
+	width: 100%;
+}
+
+.shapes .sqare {
+	position: relative;
+	left: -6%;
+	width: 30px;
+	height: 30px;
+	background-color: transparent;
+	border: 3px solid #ff5e00b7;
+	transition: border-color .4s ease;
+	-webkit-transition: border-color .4s ease;
+}
+
+.shapes .rectngl {
+	position: absolute;
+	top: -5px;
+	left: 60%;
+	width: 60px;
+	height: 30px;
+	background-color: transparent;
+	border: 3px solid #ff5e00b7;
+	transition: border-color .4s ease;
+	-webkit-transition: border-color .4s ease;
+}
+
+.shapes .circle {
+	position: absolute;
+	top: 40px;
+	left: 30%;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 3px solid #ff5e00b7;
+	transition: border-color .4s ease;
+	-webkit-transition: border-color .4s ease;
+}
+
+.shapes .triangle {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	top: -10px;
+	left: 100%;
+}
+
+@keyframes Floating {
+	from {
+		-webkit-transform: translate(0, 0px);
+	}
+
+	65% {
+		-webkit-transform: translate(0, 50px);
+	}
+
+	to {
+		-webkit-transform: translate(0, -0px);
+	}
+}
+
+.float {
+	animation-name: Floating;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes Spinning {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+.spin {
+	animation-name: Spinning;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}

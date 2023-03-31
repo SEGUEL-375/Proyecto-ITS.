@@ -1,0 +1,12 @@
+#modal-button:hover {
+	background: #ff5e00d7;
+	color: #ffffff;
+	border-radius: 8px;
+	transition: 0.5s;
+}
+
+hr {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border-top: 2.5px solid #FF5D00;;
+}

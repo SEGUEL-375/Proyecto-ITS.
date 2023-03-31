@@ -1,0 +1,31 @@
+<div id="container">
+    <!-- imagen del logo de la institucion -->
+    <div class="header-img">
+        <a routerLink="/"><img src="./../../../assets/logo-institucion.png" alt="logoinstitucion"></a>
+    </div>
+    <br>
+    <div class="form">
+        <h2>Inicio de Sesión</h2>
+        <hr class="border-1 opacity-75">
+        <br>
+        <form [formGroup]="formLogin" class="col">
+            <div class="row-md-6">
+                <label for="validationCustom01" class="form-label">Email:</label>
+                <input type="email" class="form-control" placeholder="user123@example.com" formControlName="email_user" required>
+            </div>
+            <br>
+            <div class="row-md-6">
+                <label for="validationCustom02" class="form-label">Contraseña:</label>
+                <input type="password" class="form-control" placeholder="********" formControlName="password_user" required>
+            </div>
+        </form>
+        <div style="text-align: end;">
+            <button style="color: #898989; background-color: transparent; border: none;" (click)="recuperarContra(formLogin.value.email_user)">¿Olvidó su contraseña?</button>
+        </div>
+    </div>
+    <br>
+    <div class="buttons-container">
+        <button type="button" id="btn1" class="btn btn-primary btn-lg btn-block" [disabled]="formLogin.invalid" (click)="login(formLogin.value.email_user, formLogin.value.password_user)">Ingresar</button>
+        <button type="button" class="btn btn-outline btn-lg btn-block" style="border-color: #FF5D00;" routerLink="/registro">Registrarse</button>
+    </div>
+</div>

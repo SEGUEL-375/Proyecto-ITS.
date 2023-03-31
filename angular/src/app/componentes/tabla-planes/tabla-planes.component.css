@@ -1,0 +1,8 @@
+input {
+    border: none;
+    width: 100%;
+}
+
+input:focus {
+    border: 2px solid;
+}

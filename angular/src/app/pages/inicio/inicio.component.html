@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div class="header"></div>
+<div class="conteiner">
+    <H2>Carreras</H2>
+    <br>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <!-- <p class="card-text"></p> -->
+                    <a routerLink="/planCarrera" [queryParams]="{carrera: '1'}" class="btn"><img
+                            src="./../../../assets/desarrollo.jpg" alt="img-carrera" width="92.5%"></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <!-- <p class="card-text"></p> -->
+                    <a routerLink="/planCarrera" [queryParams]="{carrera: '2'}" class="btn"><img
+                            src="./../../../assets/soporte.jpg" alt="img-carrera" width="100%"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="modal-carrera" id="container-buttons" *ngIf="login && userRol == 'admin' || userRol == 'director'">
+        <app-modal-form-carrera></app-modal-form-carrera>
+    </div>
+</div>
+<app-footer></app-footer>

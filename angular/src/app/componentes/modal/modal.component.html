@@ -1,0 +1,178 @@
+<!-- Button trigger modal -->
+<button id="modal-button" type="button" class="btn btn-outline" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-gear-fill"
+        viewBox="0 0 18 18">
+        <path
+            d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+    </svg>
+</button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Complete los siguientes datos</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="container">
+                    <h4>Institucion</h4>
+                    <hr class="border-1 opacity-75">
+
+
+                    <form class="row g-3 needs-validation" [formGroup]="formModal">
+                        <div class="col-md-12">
+                            <label for="validationCustom01" class="form-label">*Nombre:</label>
+                            <input type="text" class="form-control" id="validationCustom01"
+                                placeholder="Ej: Instituto Tecnico Superior de Cipolletti" name="nombreuser"
+                                formControlName="nombre" required>
+                            <div class="valid-feedback">
+                                Correcto!
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom02" class="form-label">*CUE:</label>
+                            <input type="number" class="form-control" id="validationCustom02" placeholder="..."
+                                name="apellidosuser" formControlName="cue" required>
+                            <div class="valid-feedback">
+                                Correcto!
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom03" class="form-label">*Provincia:</label>
+                            <input type="text" class="form-control" id="validationCustom03" placeholder="Ej: Rio Negro"
+                                name="fecha_nacimientoUSer" formControlName="provincia" required>
+                            <div class="invalid-feedback">
+                                Campo Incorrecto o Incompleto.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom03" class="form-label">*Direccion:</label>
+                            <input type="text" class="form-control" id="validationCustom03"
+                                placeholder="Ej: Rio Salado 1790" name="fecha_nacimientoUSer"
+                                formControlName="direccion" required>
+                            <div class="invalid-feedback">
+                                Campo Incorrecto o Incompleto.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom05" class="form-label">*Localidad:</label>
+                            <input type="text" class="form-control" id="validationCustom05" placeholder="Ej: Cipolletti"
+                                name="lugar_nacimientoUSer" formControlName="localidad" required>
+                            <div class="invalid-feedback">
+                                Campo Incorrecto o Incompleto.
+                            </div>
+                        </div>
+                        <div class="mb-3 col-md-12">
+                            <label for="formFileMultiple" class="form-label">*Logotipo:</label>
+                            <input class="form-control" type="file" id="formFileMultiple" name="img_docUser"
+                                formControlName="logo" multiple>
+                        </div>
+
+
+
+                        <br>
+
+                        <h4>Telefonos</h4>
+                        <hr class="border-1 opacity-75">
+
+
+                        <div class="col-md-12">
+                            <div class="divBuscador">
+                                <label for="validationCustom05" class="form-label">*1° Telefono:</label>
+                                <input type="text" class="form-control" id="validationCustom05"
+                                    name="lugar_nacimientoUSer" formControlName="tele" required>
+                                <div class="invalid-feedback">
+                                    Campo Incorrecto o Incompleto.
+                                </div>
+                            </div>
+                        </div>
+                        <!----------------------------------------------------------------------------------------------->
+                        <div class="col-md-12">
+                            <div class="divBuscador">
+                                <label for="validationCustom05" class="form-label">2° Telefono:</label>
+                                <input type="text" class="form-control" id="validationCustom05"
+                                    name="lugar_nacimientoUSer" formControlName="tele2" required>
+                                <div class="invalid-feedback">
+                                    Campo Incorrecto o Incompleto.
+                                </div>
+                            </div>
+                        </div>
+                        <!----------------------------------------------------------------------------------------->
+
+                        <div class="col-md-12">
+                            <div class="divBuscador">
+                                <label for="validationCustom05" class="form-label">3° Telefono:</label>
+                                <input type="text" class="form-control" id="validationCustom05"
+                                    name="lugar_nacimientoUSer" formControlName="tele3" required>
+                                <div class="invalid-feedback">
+                                    Campo Incorrecto o Incompleto.
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+
+
+                        <br>
+
+                        <h4>Emails</h4>
+                        <hr class="border-1 opacity-75">
+
+
+                        <!------------------------------------------------------------------------------------------------>
+                        <div class="col-md-12">
+                            <div class="divBuscador">
+                                <label for="validationCustom05" class="form-label">*1° Email:</label>
+                                <input type="text" class="form-control" id="validationCustom05"
+                                    name="lugar_nacimientoUSer" formControlName="email" required>
+                                <div class="invalid-feedback">
+                                    Campo Incorrecto o Incompleto.
+                                </div>
+                            </div>
+                        </div>
+                        <!----------------------------------------------------------------------------------------------->
+                        <div class="col-md-12">
+                            <div class="divBuscador">
+                                <label for="validationCustom05" class="form-label">2° Email:</label>
+                                <input type="text" class="form-control" id="validationCustom05"
+                                    name="lugar_nacimientoUSer" formControlName="email2" required>
+                                <div class="invalid-feedback">
+                                    Campo Incorrecto o Incompleto.
+                                </div>
+                            </div>
+                        </div>
+                        <!----------------------------------------------------------------------------------------------->
+                        <div class="col-md-12">
+                            <div class="divBuscador">
+                                <label for="validationCustom05" class="form-label">3° Email:</label>
+                                <input type="text" class="form-control" id="validationCustom05"
+                                    name="lugar_nacimientoUSer" formControlName="email3" required>
+                                <div class="invalid-feedback">
+                                    Campo Incorrecto o Incompleto.
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                    
+                    </form>
+                    <br>
+                </div>
+
+
+          
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn" style="background-color: #FF5D00; color: #fff;"
+                    (click)="enviarDatos()">Actualizar</button>
+            </div>
+
+        </div>
+    </div>
+</div>

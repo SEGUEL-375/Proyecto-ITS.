@@ -1,0 +1,45 @@
+.conteiner {
+    padding: 0 10% 0 10%;
+    margin-bottom: 10%;
+}
+
+.header {
+    height: 250px;
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('./../../../assets/imagen-inicio.jpg') no-repeat ;
+    background-size: cover;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#container-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+hr {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border-top: 2px solid #FF5D00;
+}
+
+.badge {
+  background-color: #FF5D00;
+  color: rgb(255, 255, 255);
+}

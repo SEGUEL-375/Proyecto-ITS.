@@ -1,0 +1,15 @@
+export interface Modal {
+    id:string,
+    nombre: string,
+    cue: number,
+    provincia: string,
+    direccion: string,
+    localidad: string,
+    logo?: string,
+    tele:number,
+    tele2?:number,
+    tele3?:number,
+    email: string,
+    email2?: string,
+    email3?: string,
+}
